@@ -8,7 +8,7 @@
 </p>
 
 <h3 align="left">Connect with me :</h3>
-<p></p>Email me on : <b>sakalyin95@gmail.com</b><p>
+<p></p>Email me on : <b>kimlenghong1@gmail.com/b><p>
 
 <p align="left">
 <a href="https://www.linkedin.com/in/sakal-yin-8a7877241/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/sakal-yin-8a7877241/" height="30" width="40" /></a>
