@@ -1,7 +1,7 @@
 <h1 align="center">Hi there👋, I'm KIMLENG HONG</h1>
 <h3 align="center">Data Scientist Student</h3>
 
-<p align="center"> <img src="" /> </p>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=kimleng432&label=Profile%20views&color=brightgreen" alt="SakalYin" /> </p>
 
 <p align="center">
   <img src="https://github.com/SakalYin/SakalYin/blob/main/pop-pop-cat.gif" alt="pop-pop-cat" width="250">
