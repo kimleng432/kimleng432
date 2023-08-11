@@ -1,0 +1,59 @@
+# User function for compatitor D
+xsim <- function(xr,a,m,b){
+  h <- 2/(b-a) # height of the criangle
+  c <- (m-a)/(b-a) # critical value
+  myresult <-  a + sqrt(2*xr*(m-a)/h)
+  if (xr > c) {
+    myresult <-  b - sqrt(2*(1-xr)*(b-m)/h)
+  }
+  return(myresult) # return the result
+}
+# User function for Competitor A Discrete Probability
+asim <- function(xrand) {
+  if (xrand <= 0.3) {
+    aresult <- 11500
+  } else if (xrand <= 0.5) {
+    aresult <- 12000
+  } else {
+    aresult <- 13800
+  }
+  return(aresult)
+}
+
+install.packages("svDialogs")
+library(svDialogs)
+
+# Main Program
+# Ask the iteration number using readline or dlg_Input
+# nosim <- readline("Enter the iteration number ")
+nosim <- dlg_Input("Enter the iteration number: ")$res
+# Change the entered number as integer
+nosim <- as.integer(nosim)
+
+# Ask your bidding price
+# mybidding <- readline("Enter your new bidding price ")
+mybidding <- dlg_Input("Enter your bidding price: ")$res
+# Change the entered number as integer
+mybidding <- as.integer(mybidding)
+# Initiation of the Loop
+i <- 1
+winning <- 0
+while (i <= nosim) {
+   xr1 <- runif(1)
+   a <- asim(xr1) # Competitor A - Discrete Probability
+   xr2 <- runif(1)
+     b <-  qnorm(xr2, 12500, 550) # Competitor B - Normal probability
+   xr3 <- runif(1)
+    c <- 11500 + xr3*(13500-11500) # Competitor C - Uniform probability
+    
+   xr4 <- runif(1)
+   d <- xsim(xr4, 11599, 12500, 13500) # Competitor D - Betta distribution
+   combidding <- min(a,b,c,d) # Calculate the minimum or competitors price
+   if (mybidding < combidding){
+     winning <- winning + 1  # Count of winning case
+   }
+ # print(i)
+ i <- i + 1 
+}
+winprob <- winning / nosim # Calculate the winning probability
+print(paste("The winning probability is ", winprob))
